@@ -1,0 +1,157 @@
+{
+    "@context": [
+      "https://www.w3.org/ns/credentials/v2",
+      "https://schema.org/",
+      "https://example.org/contexts/rwa-composite-v1.jsonld"
+    ],
+    "type": ["VerifiableCredential", "RWACompositeCredential"],
+    "id": "urn:uuid:f7d8e9c1-a2b3-4c5d-6e7f-8a9b0c1d2e3f",
+    "issuer": "did:web:precious.metals.issuer.com", 
+    "issuanceDate": "2025-01-15T10:30:00Z",
+    "expirationDate": "2026-01-15T10:30:00Z",
+    "credentialSubject": {
+      "id": "did:ion:EiC7f8b9a1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6f7", 
+      "asset": {
+        "assetId": "did:ion:EiC7f8b9a1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6f7", 
+        "assetType": "Commodity",
+        "category": "Gold",
+        "classDid": "did:web:precious.metals.issuer.com:class:GOLD-999",
+        "tokenBinding": {
+          "standard": "ERC-1155",
+          "chain": "eip155:1",
+          "contract": "0x742d35Cc6567C71C0f4B4f8c7cF5A6C5e1C5f6A8",
+          "tokenId": "20001"
+        }
+      },
+  
+      "identity": {
+        "schemaVersion": 1,
+        "identitySchema": "https://precious.metals.issuer.com/schemas/commodity-identity-v1.json",
+        "identifiers": [
+          {
+            "identifierScheme": "WarehouseReceipt",
+            "identifierValue": "LBMA-SH-GOLD-2025-001234",
+            "jurisdiction": "CN-SH",
+            "issuingAuthority": "Shanghai Gold Exchange"
+          },
+          { "identifierScheme": "BatchSerial", "identifierValue": "BATCH-GOLD-999-20250115-001" },
+          { "identifierScheme": "LBMA-RefinerCode", "identifierValue": "LBMA-CN-001" }
+        ],
+        "taxonomies": [
+          { "system": "UNSPSC", "code": "11101501", "label": "Gold bullion" },
+          { "system": "LBMA-GD", "code": "GOLD-999", "label": "Gold 99.9% purity" }
+        ],
+        "spatialFootprint": {
+          "encoding": "GeoJSON",
+          "geometry": {
+            "type": "Point",
+            "coordinates": [121.4737,31.2304]
+          },
+          "granularity": "vault"
+        },
+        "documents": [
+          {"name": "AssayReport", "hash": "0x8f3e7d9c2a1b0e4f6a8d2c5b7e9f1a3c6d8e0b2a4c7f9e1d3b5a8c0e2f4a6b9", "mediaType": "application/pdf", "issuedBy": "did:web:sgs.assay.com"},
+          {"name": "WarehouseReceipt", "hash": "0x4a7c2e9f5b8d1c6e0a3f7b9d2c5a8e1f4b7c0d9e2a5f8b1c4d7e0a3f6b9c2e5", "mediaType": "application/pdf"}
+        ],
+        "relations": [
+          { "relation": "belongsToClass", "target": "did:web:precious.metals.issuer.com:class:GOLD-999" }
+        ],
+        "attributes": [
+          { "name": "weight", "value": "1000", "unit": "g" },
+          { "name": "purity", "value": "999.9", "unit": "per_mille" },
+          { "name": "refiner", "value": "Shanghai Gold Refinery Co." },
+          { "name": "manufactureDate", "value": "2025-01-10" }
+        ],
+        "custom": {
+          "lbmaApproved": true,
+          "vaultSectionId": "VAULT-A-SHELF-001"
+        },
+        "sectionStatus": {
+          "type": "StatusList2021Entry",
+          "statusPurpose": "revocation",
+          "statusListCredential": "https://status.precious.metals.issuer.com/identity/2025-01",
+          "statusListIndex": "15001"
+        },
+        "sectionProof": {
+          "type": "Eip712Signature2023",
+          "issuer": "did:web:precious.metals.issuer.com",
+          "issued": "2025-01-15T10:30:00Z",
+          "expires": "2027-01-15T10:30:00Z",
+          "sectionHash": "0xa1b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6e7f8a9b0c1d2e3f4a5b6c7d8e9f0a1b2",
+          "proofValue": "0x7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9"
+        }
+      },
+  
+      "compliance": {
+        "licenseId": "SGE-PRECIOUS-2025-9901",
+        "sellableRegions": ["CN", "HK", "SG"],
+        "restrictions": ["QualifiedInvestorOnly"],
+        "effectiveFrom": "2025-01-01",
+        "effectiveTo": "2026-01-01",
+        "regulatorDid": "did:web:sge.regulator.gov.cn",
+        "sectionStatus": {
+          "type": "StatusList2021Entry",
+          "statusPurpose": "suspension",
+          "statusListCredential": "https://status.sge.regulator.gov.cn/lists/2025-01",
+          "statusListIndex": "7788"
+        },
+        "sectionProof": {
+          "type": "BbsBlsSignature2020",
+          "issuer": "did:web:sge.regulator.gov.cn",
+          "issued": "2025-01-01T00:00:00Z",
+          "expires": "2026-01-01T00:00:00Z",
+          "sectionHash": "0xc5d6e7f8a9b0c1d2e3f4a5b6c7d8e9f0a1b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6",
+          "verificationMethod": "did:web:sge.regulator.gov.cn#bbs-key-2025",
+          "proofPurpose": "assertionMethod",
+          "proofValue": "v4F8_precious_metals_compliance_2025_signature_data_base64_encoded_string"
+        }
+      },
+  
+      "custody": {
+        "custodianDid": "did:web:secure.vault.shanghai.com",
+        "location": "Vault-SH-GOLD-A1",
+        "policy": "ISO-27001+LBMA-Standards",
+        "auditCycleDays": 30,
+        "insurancePolicyRef": {"hash": "0xf1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2"},
+        "sectionStatus": {
+          "type": "StatusList2021Entry",
+          "statusPurpose": "revocation",
+          "statusListCredential": "https://status.secure.vault.shanghai.com/lists/2025-01",
+          "statusListIndex": "11223"
+        },
+        "sectionProof": {
+          "type": "Eip712Signature2023",
+          "issuer": "did:web:secure.vault.shanghai.com",
+          "issued": "2025-01-15T08:00:00Z",
+          "expires": "2026-03-15T08:00:00Z",
+          "sectionHash": "0xe9f0a1b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6e7f8a9b0c1d2e3f4a5b6c7d8e9f0",
+          "proofValue": "0x3b4c5d6e7f8a9b0c1d2e3f4a5b6c7d8e9f0a1b2c3d4e5f6a7b8c9d0e1f2a3b4c5"
+        }
+      }
+    },
+  
+    "credentialStatus": {
+      "id": "https://status.precious.metals.issuer.com/composite/2025-01#20001",
+      "type": "StatusList2021Entry",
+      "statusPurpose": "revocation",
+      "statusListIndex": "20001",
+      "statusListCredential": "https://status.precious.metals.issuer.com/composite/2025-01",
+      "sections": [
+        {"path": "/credentialSubject/identity", "statusListCredential": "https://status.precious.metals.issuer.com/identity/2025-01", "statusListIndex": "15001"},
+        {"path": "/credentialSubject/compliance", "statusListCredential": "https://status.sge.regulator.gov.cn/lists/2025-01", "statusListIndex": "7788"},
+        {"path": "/credentialSubject/custody", "statusListCredential": "https://status.secure.vault.shanghai.com/lists/2025-01", "statusListIndex": "11223"}
+      ]
+    },
+  
+    "evidence": [
+      {"type": "OnChainAnchor", "chain": "eip155:1", "tx": "0x2d3e4f5a6b7c8d9e0f1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4", "purpose": "batchAnchor"}
+    ],
+  
+    "proof": {
+      "type": "BbsBlsSignature2020",
+      "created": "2025-01-15T10:30:00Z",
+      "verificationMethod": "did:web:precious.metals.issuer.com#bbs-key-2025",
+      "proofPurpose": "assertionMethod",
+      "proofValue": "uJk9_gold_composite_credential_proof_signature_base64_encoded_data_2025"
+    }
+  }

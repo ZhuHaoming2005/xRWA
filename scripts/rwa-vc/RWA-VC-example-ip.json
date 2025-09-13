@@ -1,0 +1,155 @@
+{
+    "@context": [
+      "https://www.w3.org/ns/credentials/v2",
+      "https://schema.org/",
+      "https://example.org/contexts/rwa-composite-v1.jsonld"
+    ],
+    "type": ["VerifiableCredential", "RWACompositeCredential"],
+    "id": "urn:uuid:0d1e2f3a-4b5c-6d7e-8f9a-0b1c2d3e4f5a",
+    "issuer": "did:web:ip.office.gov", 
+    "issuanceDate": "2025-06-18T16:30:00Z",
+    "expirationDate": "2045-06-18T16:30:00Z",
+    "credentialSubject": {
+      "id": "did:ion:EiH2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2", 
+      "asset": {
+        "assetId": "did:ion:EiH2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2", 
+        "assetType": "IntellectualProperty",
+        "category": "Patent",
+        "classDid": "did:web:ip.office.gov:class:UTILITY-PATENT",
+        "tokenBinding": {
+          "standard": "ERC-721",
+          "chain": "eip155:1",
+          "contract": "0x5b6c7d8e9f0a1b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6e7f8a9b0c1d2e3f4a5b6c",
+          "tokenId": "70001"
+        }
+      },
+  
+      "identity": {
+        "schemaVersion": 1,
+        "identitySchema": "https://ip.office.gov/schemas/patent-identity-v1.json",
+        "identifiers": [
+          {
+            "identifierScheme": "PatentNumber",
+            "identifierValue": "US11,234,567B2",
+            "jurisdiction": "US",
+            "issuingAuthority": "United States Patent and Trademark Office"
+          },
+          { "identifierScheme": "ApplicationNumber", "identifierValue": "16/987,654" },
+          { "identifierScheme": "PublicationNumber", "identifierValue": "US20240123456A1" }
+        ],
+        "taxonomies": [
+          { "system": "IPC", "code": "H04L29/06", "label": "Computer network security" },
+          { "system": "CPC", "code": "H04L63/0428", "label": "Network access control based on identity" }
+        ],
+        "documents": [
+          {"name": "PatentSpecification", "hash": "0x9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6f7a8b9c0d", "mediaType": "application/pdf", "issuedBy": "did:web:uspto.gov"},
+          {"name": "PriorArtSearch", "hash": "0xd3e4f5a6b7c8d9e0f1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4", "mediaType": "application/pdf"},
+          {"name": "ClaimsAnalysis", "hash": "0xf6a7b8c9d0e1f2a3b4c5d6e7f8a9b0c1d2e3f4a5b6c7d8e9f0a1b2c3d4e5f6a7", "mediaType": "application/pdf"}
+        ],
+        "relations": [
+          { "relation": "belongsToClass", "target": "did:web:ip.office.gov:class:UTILITY-PATENT" },
+          { "relation": "inventedBy", "target": "did:web:inventors.registry:jane.smith" }
+        ],
+        "attributes": [
+          { "name": "title", "value": "Blockchain-based Identity Verification System" },
+          { "name": "inventor", "value": "Jane Smith" },
+          { "name": "filingDate", "value": "2023-12-15" },
+          { "name": "grantDate", "value": "2025-06-18" },
+          { "name": "expirationDate", "value": "2043-12-15" },
+          { "name": "claims", "value": 25 },
+          { "name": "maintenanceFees", "value": "Current" }
+        ],
+        "custom": {
+          "technologyField": "Blockchain Security",
+          "commercialValue": "High",
+          "licensingAvailable": true
+        },
+        "sectionStatus": {
+          "type": "StatusList2021Entry",
+          "statusPurpose": "revocation",
+          "statusListCredential": "https://status.ip.office.gov/identity/2025-06",
+          "statusListIndex": "30001"
+        },
+        "sectionProof": {
+          "type": "Eip712Signature2023",
+          "issuer": "did:web:ip.office.gov",
+          "issued": "2025-06-18T16:30:00Z",
+          "expires": "2043-12-15T16:30:00Z",
+          "sectionHash": "0xe9f0a1b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6e7f8a9b0c1d2e3f4a5b6c7d8e9f0",
+          "proofValue": "0xa1b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6e7f8a9b0c1d2e3f4a5b6c7d8e9f0a1b2"
+        }
+      },
+  
+      "compliance": {
+        "licenseId": "USPTO-PAT-2025-7701",
+        "sellableRegions": ["US", "CA", "MX"],
+        "restrictions": ["PatentLicenseRequired", "TechnologyTransferCompliance"],
+        "effectiveFrom": "2025-06-18",
+        "effectiveTo": "2043-12-15",
+        "regulatorDid": "did:web:uspto.gov",
+        "sectionStatus": {
+          "type": "StatusList2021Entry",
+          "statusPurpose": "suspension",
+          "statusListCredential": "https://status.uspto.gov/lists/2025-06",
+          "statusListIndex": "17889"
+        },
+        "sectionProof": {
+          "type": "BbsBlsSignature2020",
+          "issuer": "did:web:uspto.gov",
+          "issued": "2025-06-18T00:00:00Z",
+          "expires": "2043-12-15T00:00:00Z",
+          "sectionHash": "0xb2c3d4e5f6a7b8c9d0e1f2a3b4c5d6e7f8a9b0c1d2e3f4a5b6c7d8e9f0a1b2c3",
+          "verificationMethod": "did:web:uspto.gov#bbs-key-patent-2025",
+          "proofPurpose": "assertionMethod",
+          "proofValue": "b6R9_uspto_patent_trademark_office_compliance_verification_signature"
+        }
+      },
+  
+      "custody": {
+        "custodianDid": "did:web:ip.escrow.service",
+        "location": "Digital-IP-Vault-Secure-Cloud-1",
+        "policy": "IP-PROTECTION-STANDARD+DIGITAL-CUSTODY",
+        "auditCycleDays": 180,
+        "insurancePolicyRef": {"hash": "0xc4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5"},
+        "sectionStatus": {
+          "type": "StatusList2021Entry",
+          "statusPurpose": "revocation",
+          "statusListCredential": "https://status.ip.escrow.service/lists/2025-06",
+          "statusListIndex": "21223"
+        },
+        "sectionProof": {
+          "type": "Eip712Signature2023",
+          "issuer": "did:web:ip.escrow.service",
+          "issued": "2025-06-18T15:00:00Z",
+          "expires": "2026-06-18T15:00:00Z",
+          "sectionHash": "0x6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e",
+          "proofValue": "0x9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b"
+        }
+      }
+    },
+  
+    "credentialStatus": {
+      "id": "https://status.ip.office.gov/composite/2025-06#70001",
+      "type": "StatusList2021Entry",
+      "statusPurpose": "revocation",
+      "statusListIndex": "70001",
+      "statusListCredential": "https://status.ip.office.gov/composite/2025-06",
+      "sections": [
+        {"path": "/credentialSubject/identity", "statusListCredential": "https://status.ip.office.gov/identity/2025-06", "statusListIndex": "30001"},
+        {"path": "/credentialSubject/compliance", "statusListCredential": "https://status.uspto.gov/lists/2025-06", "statusListIndex": "17889"},
+        {"path": "/credentialSubject/custody", "statusListCredential": "https://status.ip.escrow.service/lists/2025-06", "statusListIndex": "21223"}
+      ]
+    },
+  
+    "evidence": [
+      {"type": "OnChainAnchor", "chain": "eip155:1", "tx": "0x8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a", "purpose": "batchAnchor"}
+    ],
+  
+    "proof": {
+      "type": "BbsBlsSignature2020",
+      "created": "2025-06-18T16:30:00Z",
+      "verificationMethod": "did:web:ip.office.gov#bbs-key-patent-2025",
+      "proofPurpose": "assertionMethod",
+      "proofValue": "u1S0_intellectual_property_patent_composite_credential_office_proof"
+    }
+  }

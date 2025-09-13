@@ -1,0 +1,164 @@
+{
+    "@context": [
+      "https://www.w3.org/ns/credentials/v2",
+      "https://schema.org/",
+      "https://example.org/contexts/rwa-composite-v1.jsonld"
+    ],
+    "type": ["VerifiableCredential", "RWACompositeCredential"],
+    "id": "urn:uuid:1e2f3a4b-5c6d-7e8f-9a0b-1c2d3e4f5a6b",
+    "issuer": "did:web:beijing.housing.registry.gov.cn", 
+    "issuanceDate": "2025-07-25T10:00:00Z",
+    "expirationDate": "2075-07-25T10:00:00Z",
+    "credentialSubject": {
+      "id": "did:ion:EiI3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3", 
+      "asset": {
+        "assetId": "did:ion:EiI3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3", 
+        "assetType": "RealEstate",
+        "category": "Commercial",
+        "classDid": "did:web:beijing.housing.registry.gov.cn:class:COMMERCIAL-OFFICE",
+        "tokenBinding": {
+          "standard": "ERC-721",
+          "chain": "eip155:1",
+          "contract": "0x6c7d8e9f0a1b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6e7f8a9b0c1d2e3f4a5b6c7d",
+          "tokenId": "80001"
+        }
+      },
+  
+      "identity": {
+        "schemaVersion": 1,
+        "identitySchema": "https://beijing.housing.registry.gov.cn/schemas/realestate-identity-v1.json",
+        "identifiers": [
+          {
+            "identifierScheme": "JurisdictionalRegistry",
+            "identifierValue": "CN-BJ-CHAOYANG-2025-888999",
+            "jurisdiction": "CN-BJ",
+            "issuingAuthority": "Beijing Housing and Urban-Rural Development Commission"
+          },
+          { "identifierScheme": "PropertyCode", "identifierValue": "BJ-OFFICE-CBD-TOWER-A-2501" },
+          { "identifierScheme": "LandUseRightNumber", "identifierValue": "BJ-LAND-2024-001234" }
+        ],
+        "taxonomies": [
+          { "system": "UNSPSC", "code": "70131800", "label": "Commercial office property" },
+          { "system": "CN-PROPERTY", "code": "OFFICE-A", "label": "Grade A Office Building" }
+        ],
+        "spatialFootprint": {
+          "encoding": "GeoJSON",
+          "geometry": {
+            "type": "Polygon",
+            "coordinates": [[[116.4575,39.9087],[116.4585,39.9087],[116.4585,39.9097],[116.4575,39.9097],[116.4575,39.9087]]]
+          },
+          "granularity": "unit"
+        },
+        "documents": [
+          {"name": "PropertyOwnershipCertificate", "hash": "0x1d2e3f4a5b6c7d8e9f0a1b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6e7f8a9b0c1d2e", "mediaType": "application/pdf", "issuedBy": "did:web:beijing.housing.registry.gov.cn"},
+          {"name": "LandUseRightCertificate", "hash": "0x5a6b7c8d9e0f1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b", "mediaType": "application/pdf"},
+          {"name": "BuildingPlan", "hash": "0x9e0f1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f", "mediaType": "application/pdf"},
+          {"name": "ValuationReport", "hash": "0xd2e3f4a5b6c7d8e9f0a1b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6e7f8a9b0c1d2e3", "mediaType": "application/pdf", "issuedBy": "did:web:beijing.appraisal.org"}
+        ],
+        "relations": [
+          { "relation": "belongsToClass", "target": "did:web:beijing.housing.registry.gov.cn:class:COMMERCIAL-OFFICE" },
+          { "relation": "locatedInBuilding", "target": "did:web:properties.beijing:cbd-tower-a" }
+        ],
+        "attributes": [
+          { "name": "floorArea", "value": "580", "unit": "sqm" },
+          { "name": "floor", "value": 25 },
+          { "name": "totalFloors", "value": 45 },
+          { "name": "constructionYear", "value": 2020 },
+          { "name": "buildingGrade", "value": "Grade A" },
+          { "name": "parkingSpaces", "value": 3 },
+          { "name": "propertyManagementFee", "value": "28", "unit": "CNY_per_sqm_per_month" }
+        ],
+        "custom": {
+          "districtCode": "110105",
+          "smartBuildingFeatures": ["AI-HVAC", "IoT-Security", "Energy-Management"],
+          "propertyManager": "CBRE Beijing"
+        },
+        "sectionStatus": {
+          "type": "StatusList2021Entry",
+          "statusPurpose": "revocation",
+          "statusListCredential": "https://status.beijing.housing.registry.gov.cn/identity/2025-07",
+          "statusListIndex": "33001"
+        },
+        "sectionProof": {
+          "type": "Eip712Signature2023",
+          "issuer": "did:web:beijing.housing.registry.gov.cn",
+          "issued": "2025-07-25T10:00:00Z",
+          "expires": "2075-07-25T10:00:00Z",
+          "sectionHash": "0xfab1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c",
+          "proofValue": "0x4e5f6a7b8c9d0e1f2a3b4c5d6e7f8a9b0c1d2e3f4a5b6c7d8e9f0a1b2c3d4e5f6"
+        }
+      },
+  
+      "compliance": {
+        "licenseId": "BJ-REAL-ESTATE-2025-8801",
+        "sellableRegions": ["CN-BJ", "CN"],
+        "restrictions": ["ForeignInvestmentRestricted", "CommercialUseOnly"],
+        "effectiveFrom": "2025-07-01",
+        "effectiveTo": "2075-07-01",
+        "regulatorDid": "did:web:beijing.housing.registry.gov.cn",
+        "sectionStatus": {
+          "type": "StatusList2021Entry",
+          "statusPurpose": "suspension",
+          "statusListCredential": "https://status.beijing.housing.registry.gov.cn/compliance/2025-07",
+          "statusListIndex": "19990"
+        },
+        "sectionProof": {
+          "type": "BbsBlsSignature2020",
+          "issuer": "did:web:beijing.housing.registry.gov.cn",
+          "issued": "2025-07-01T00:00:00Z",
+          "expires": "2075-07-01T00:00:00Z",
+          "sectionHash": "0xc6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7",
+          "verificationMethod": "did:web:beijing.housing.registry.gov.cn#bbs-key-compliance-2025",
+          "proofPurpose": "assertionMethod",
+          "proofValue": "e2N4_beijing_housing_commission_real_estate_compliance_verification"
+        }
+      },
+  
+      "custody": {
+        "custodianDid": "did:web:china.property.trust.bank",
+        "location": "CPTB-Beijing-Property-Vault-Level-3",
+        "policy": "CHINA-PROPERTY-LAW+FIDUCIARY-STANDARD",
+        "auditCycleDays": 90,
+        "insurancePolicyRef": {"hash": "0xea1b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6e7f8a9b0c1d2e3f4a5b6c7d8e9f0a1b"},
+        "sectionStatus": {
+          "type": "StatusList2021Entry",
+          "statusPurpose": "revocation",
+          "statusListCredential": "https://status.china.property.trust.bank/lists/2025-07",
+          "statusListIndex": "23334"
+        },
+        "sectionProof": {
+          "type": "Eip712Signature2023",
+          "issuer": "did:web:china.property.trust.bank",
+          "issued": "2025-07-25T09:00:00Z",
+          "expires": "2026-07-25T09:00:00Z",
+          "sectionHash": "0x8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a",
+          "proofValue": "0xb2c3d4e5f6a7b8c9d0e1f2a3b4c5d6e7f8a9b0c1d2e3f4a5b6c7d8e9f0a1b2c3"
+        }
+      }
+    },
+  
+    "credentialStatus": {
+      "id": "https://status.beijing.housing.registry.gov.cn/composite/2025-07#80001",
+      "type": "StatusList2021Entry",
+      "statusPurpose": "revocation",
+      "statusListIndex": "80001",
+      "statusListCredential": "https://status.beijing.housing.registry.gov.cn/composite/2025-07",
+      "sections": [
+        {"path": "/credentialSubject/identity", "statusListCredential": "https://status.beijing.housing.registry.gov.cn/identity/2025-07", "statusListIndex": "33001"},
+        {"path": "/credentialSubject/compliance", "statusListCredential": "https://status.beijing.housing.registry.gov.cn/compliance/2025-07", "statusListIndex": "19990"},
+        {"path": "/credentialSubject/custody", "statusListCredential": "https://status.china.property.trust.bank/lists/2025-07", "statusListIndex": "23334"}
+      ]
+    },
+  
+    "evidence": [
+      {"type": "OnChainAnchor", "chain": "eip155:1", "tx": "0xca1b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6e7f8a9b0c1d2e3f4a5b6c7d8e9f0a1b2", "purpose": "batchAnchor"}
+    ],
+  
+    "proof": {
+      "type": "BbsBlsSignature2020",
+      "created": "2025-07-25T10:00:00Z",
+      "verificationMethod": "did:web:beijing.housing.registry.gov.cn#bbs-key-realestate-2025",
+      "proofPurpose": "assertionMethod",
+      "proofValue": "v5T1_beijing_commercial_real_estate_composite_credential_housing_proof"
+    }
+  }

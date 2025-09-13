@@ -1,0 +1,21 @@
+{
+  "name": "xrwa",
+  "version": "1.0.0",
+  "description": "This project demonstrates cross-chain asset swaps using Hash Time Locked Contracts (HTLC) for different asset types:\r - ETH to ERC20\r - ETH to ERC721\r - ERC20 to ERC721",
+  "main": "truffle-config.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@openzeppelin/contracts": "^5.4.0",
+    "ganache-cli": "^6.12.2",
+    "truffle": "^5.11.5",
+    "web3": "^4.16.0"
+  }
+}

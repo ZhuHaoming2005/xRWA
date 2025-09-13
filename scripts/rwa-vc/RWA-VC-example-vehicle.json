@@ -1,0 +1,155 @@
+{
+    "@context": [
+      "https://www.w3.org/ns/credentials/v2",
+      "https://schema.org/",
+      "https://example.org/contexts/rwa-composite-v1.jsonld"
+    ],
+    "type": ["VerifiableCredential", "RWACompositeCredential"],
+    "id": "urn:uuid:7f8a9b0c-1d2e-3f4a-5b6c-7d8e9f0a1b2c",
+    "issuer": "did:web:automotive.registry.dmv", 
+    "issuanceDate": "2025-03-10T09:15:00Z",
+    "expirationDate": "2035-03-10T09:15:00Z",
+    "credentialSubject": {
+      "id": "did:ion:EiE9f0a1b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6e7f8a9", 
+      "asset": {
+        "assetId": "did:ion:EiE9f0a1b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6e7f8a9", 
+        "assetType": "Vehicle",
+        "category": "PassengerCar",
+        "classDid": "did:web:automotive.registry.dmv:class:TESLA-MODEL-S",
+        "tokenBinding": {
+          "standard": "ERC-721",
+          "chain": "eip155:1",
+          "contract": "0x1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d",
+          "tokenId": "40001"
+        }
+      },
+  
+      "identity": {
+        "schemaVersion": 1,
+        "identitySchema": "https://automotive.registry.dmv/schemas/vehicle-identity-v1.json",
+        "identifiers": [
+          {
+            "identifierScheme": "VIN",
+            "identifierValue": "5YJ3E1EA8NF012345",
+            "jurisdiction": "US-CA",
+            "issuingAuthority": "California Department of Motor Vehicles"
+          },
+          { "identifierScheme": "LicensePlate", "identifierValue": "8ABC123" },
+          { "identifierScheme": "ManufacturerSerial", "identifierValue": "TESLA-MS-2025-012345" }
+        ],
+        "taxonomies": [
+          { "system": "EPA", "code": "CAR-EV-LUXURY", "label": "Electric Luxury Sedan" },
+          { "system": "UNECE", "code": "M1", "label": "Passenger cars" }
+        ],
+        "documents": [
+          {"name": "Title", "hash": "0x3d4e5f6a7b8c9d0e1f2a3b4c5d6e7f8a9b0c1d2e3f4a5b6c7d8e9f0a1b2c3d4e", "mediaType": "application/pdf", "issuedBy": "did:web:ca.dmv.gov"},
+          {"name": "Registration", "hash": "0x7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6f7a8b", "mediaType": "application/pdf"},
+          {"name": "InspectionReport", "hash": "0xb0c1d2e3f4a5b6c7d8e9f0a1b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6e7f8a9b0c1", "mediaType": "application/pdf"}
+        ],
+        "relations": [
+          { "relation": "belongsToClass", "target": "did:web:automotive.registry.dmv:class:TESLA-MODEL-S" },
+          { "relation": "manufacturedBy", "target": "did:web:tesla.com" }
+        ],
+        "attributes": [
+          { "name": "make", "value": "Tesla" },
+          { "name": "model", "value": "Model S" },
+          { "name": "year", "value": 2025 },
+          { "name": "mileage", "value": "1250", "unit": "miles" },
+          { "name": "fuelType", "value": "Electric" },
+          { "name": "batteryCapacity", "value": "100", "unit": "kWh" },
+          { "name": "color", "value": "Pearl White" }
+        ],
+        "custom": {
+          "autopilotEnabled": true,
+          "superchargerAccess": true,
+          "softwareVersion": "2025.4.1"
+        },
+        "sectionStatus": {
+          "type": "StatusList2021Entry",
+          "statusPurpose": "revocation",
+          "statusListCredential": "https://status.automotive.registry.dmv/identity/2025-03",
+          "statusListIndex": "21001"
+        },
+        "sectionProof": {
+          "type": "Eip712Signature2023",
+          "issuer": "did:web:automotive.registry.dmv",
+          "issued": "2025-03-10T09:15:00Z",
+          "expires": "2035-03-10T09:15:00Z",
+          "sectionHash": "0xe5f6a7b8c9d0e1f2a3b4c5d6e7f8a9b0c1d2e3f4a5b6c7d8e9f0a1b2c3d4e5f6",
+          "proofValue": "0x9d0e1f2a3b4c5d6e7f8a9b0c1d2e3f4a5b6c7d8e9f0a1b2c3d4e5f6a7b8c9d0e1"
+        }
+      },
+  
+      "compliance": {
+        "licenseId": "CA-DMV-REG-2025-4401",
+        "sellableRegions": ["US-CA", "US-NV", "US-OR"],
+        "restrictions": ["EmissionCompliant", "RegistrationRequired"],
+        "effectiveFrom": "2025-03-01",
+        "effectiveTo": "2026-03-01",
+        "regulatorDid": "did:web:ca.dmv.gov",
+        "sectionStatus": {
+          "type": "StatusList2021Entry",
+          "statusPurpose": "suspension",
+          "statusListCredential": "https://status.ca.dmv.gov/lists/2025-03",
+          "statusListIndex": "11445"
+        },
+        "sectionProof": {
+          "type": "BbsBlsSignature2020",
+          "issuer": "did:web:ca.dmv.gov",
+          "issued": "2025-03-01T00:00:00Z",
+          "expires": "2026-03-01T00:00:00Z",
+          "sectionHash": "0xf2a3b4c5d6e7f8a9b0c1d2e3f4a5b6c7d8e9f0a1b2c3d4e5f6a7b8c9d0e1f2a3",
+          "verificationMethod": "did:web:ca.dmv.gov#bbs-key-vehicle-2025",
+          "proofPurpose": "assertionMethod",
+          "proofValue": "x9K3_california_vehicle_registration_compliance_verification_base64_sig"
+        }
+      },
+  
+      "custody": {
+        "custodianDid": "did:web:secure.auto.storage.ca",
+        "location": "Garage-A-Bay-15-San-Francisco",
+        "policy": "AUTO-STORAGE-STANDARD+CLIMATE-CONTROLLED",
+        "auditCycleDays": 60,
+        "insurancePolicyRef": {"hash": "0x4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e"},
+        "sectionStatus": {
+          "type": "StatusList2021Entry",
+          "statusPurpose": "revocation",
+          "statusListCredential": "https://status.secure.auto.storage.ca/lists/2025-03",
+          "statusListIndex": "15589"
+        },
+        "sectionProof": {
+          "type": "Eip712Signature2023",
+          "issuer": "did:web:secure.auto.storage.ca",
+          "issued": "2025-03-10T08:30:00Z",
+          "expires": "2026-03-10T08:30:00Z",
+          "sectionHash": "0xa6b7c8d9e0f1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7",
+          "proofValue": "0x0e1f2a3b4c5d6e7f8a9b0c1d2e3f4a5b6c7d8e9f0a1b2c3d4e5f6a7b8c9d0e1f"
+        }
+      }
+    },
+  
+    "credentialStatus": {
+      "id": "https://status.automotive.registry.dmv/composite/2025-03#40001",
+      "type": "StatusList2021Entry",
+      "statusPurpose": "revocation",
+      "statusListIndex": "40001",
+      "statusListCredential": "https://status.automotive.registry.dmv/composite/2025-03",
+      "sections": [
+        {"path": "/credentialSubject/identity", "statusListCredential": "https://status.automotive.registry.dmv/identity/2025-03", "statusListIndex": "21001"},
+        {"path": "/credentialSubject/compliance", "statusListCredential": "https://status.ca.dmv.gov/lists/2025-03", "statusListIndex": "11445"},
+        {"path": "/credentialSubject/custody", "statusListCredential": "https://status.secure.auto.storage.ca/lists/2025-03", "statusListIndex": "15589"}
+      ]
+    },
+  
+    "evidence": [
+      {"type": "OnChainAnchor", "chain": "eip155:1", "tx": "0x8c9d0e1f2a3b4c5d6e7f8a9b0c1d2e3f4a5b6c7d8e9f0a1b2c3d4e5f6a7b8c9d", "purpose": "batchAnchor"}
+    ],
+  
+    "proof": {
+      "type": "BbsBlsSignature2020",
+      "created": "2025-03-10T09:15:00Z",
+      "verificationMethod": "did:web:automotive.registry.dmv#bbs-key-vehicle-2025",
+      "proofPurpose": "assertionMethod",
+      "proofValue": "r7L4_vehicle_composite_credential_dmv_authentication_proof_signature_b64"
+    }
+  }

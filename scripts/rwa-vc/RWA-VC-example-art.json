@@ -1,0 +1,153 @@
+{
+    "@context": [
+      "https://www.w3.org/ns/credentials/v2",
+      "https://schema.org/",
+      "https://example.org/contexts/rwa-composite-v1.jsonld"
+    ],
+    "type": ["VerifiableCredential", "RWACompositeCredential"],
+    "id": "urn:uuid:3e4f5a6b-7c8d-9e0f-1a2b-3c4d5e6f7a8b",
+    "issuer": "did:web:fine.art.gallery.museum", 
+    "issuanceDate": "2025-02-20T14:45:00Z",
+    "expirationDate": "2030-02-20T14:45:00Z",
+    "credentialSubject": {
+      "id": "did:ion:EiD8a9b0c1d2e3f4a5b6c7d8e9f0a1b2c3d4e5f6a7b8", 
+      "asset": {
+        "assetId": "did:ion:EiD8a9b0c1d2e3f4a5b6c7d8e9f0a1b2c3d4e5f6a7b8", 
+        "assetType": "Art",
+        "category": "Painting",
+        "classDid": "did:web:fine.art.gallery.museum:class:CONTEMPORARY-PAINTING",
+        "tokenBinding": {
+          "standard": "ERC-721",
+          "chain": "eip155:137",
+          "contract": "0x9a8b7c6d5e4f3a2b1c0d9e8f7a6b5c4d3e2f1a0b9c8d7e6f5a4b3c2d1e0f9a8b",
+          "tokenId": "30001"
+        }
+      },
+  
+      "identity": {
+        "schemaVersion": 1,
+        "identitySchema": "https://fine.art.gallery.museum/schemas/art-identity-v1.json",
+        "identifiers": [
+          {
+            "identifierScheme": "ISCC",
+            "identifierValue": "ISCC:AAAWQH7DG6MO-5WFJS7K2L7HT-WQKQN4Y3R2P-SKML6TS",
+            "jurisdiction": "GLOBAL",
+            "issuingAuthority": "International Standard Content Code Authority"
+          },
+          { "identifierScheme": "CatalogueRaisonne", "identifierValue": "MONET-CR-1875-047" },
+          { "identifierScheme": "MuseumAccession", "identifierValue": "MOMA-2025-ART-047" }
+        ],
+        "taxonomies": [
+          { "system": "AAT", "code": "300033618", "label": "oil paintings (visual works)" },
+          { "system": "ICONCLASS", "code": "25H", "label": "landscapes" }
+        ],
+        "documents": [
+          {"name": "Provenance", "hash": "0x1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b", "mediaType": "application/pdf", "issuedBy": "did:web:sothebys.authentication"},
+          {"name": "Authentication", "hash": "0x5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d", "mediaType": "application/pdf", "issuedBy": "did:web:art.experts.committee"},
+          {"name": "ConservationReport", "hash": "0x9e0f1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f", "mediaType": "application/pdf"}
+        ],
+        "relations": [
+          { "relation": "belongsToClass", "target": "did:web:fine.art.gallery.museum:class:CONTEMPORARY-PAINTING" },
+          { "relation": "createdBy", "target": "did:web:artists.registry:claude.monet" }
+        ],
+        "attributes": [
+          { "name": "artist", "value": "Claude Monet" },
+          { "name": "title", "value": "Water Lilies at Sunset" },
+          { "name": "creationYear", "value": 1875 },
+          { "name": "medium", "value": "Oil on canvas" },
+          { "name": "dimensions", "value": "73.7 x 104.8", "unit": "cm" },
+          { "name": "condition", "value": "Excellent" }
+        ],
+        "custom": {
+          "exhibitionHistory": ["Salon de Paris 1876", "MOMA Impressionist Collection 2020"],
+          "insuranceAppraisal": "USD 15,000,000"
+        },
+        "sectionStatus": {
+          "type": "StatusList2021Entry",
+          "statusPurpose": "revocation",
+          "statusListCredential": "https://status.fine.art.gallery.museum/identity/2025-02",
+          "statusListIndex": "18001"
+        },
+        "sectionProof": {
+          "type": "Eip712Signature2023",
+          "issuer": "did:web:fine.art.gallery.museum",
+          "issued": "2025-02-20T14:45:00Z",
+          "expires": "2030-02-20T14:45:00Z",
+          "sectionHash": "0xd4e5f6a7b8c9d0e1f2a3b4c5d6e7f8a9b0c1d2e3f4a5b6c7d8e9f0a1b2c3d4e5",
+          "proofValue": "0xb8c9d0e1f2a3b4c5d6e7f8a9b0c1d2e3f4a5b6c7d8e9f0a1b2c3d4e5f6a7b8c9"
+        }
+      },
+  
+      "compliance": {
+        "licenseId": "CITES-ART-EXPORT-2025-1147",
+        "sellableRegions": ["US", "EU", "JP", "CN"],
+        "restrictions": ["AuthenticatedBuyersOnly", "ExportPermitRequired"],
+        "effectiveFrom": "2025-02-01",
+        "effectiveTo": "2030-02-01",
+        "regulatorDid": "did:web:cultural.heritage.protection.gov",
+        "sectionStatus": {
+          "type": "StatusList2021Entry",
+          "statusPurpose": "suspension",
+          "statusListCredential": "https://status.cultural.heritage.protection.gov/lists/2025-02",
+          "statusListIndex": "9912"
+        },
+        "sectionProof": {
+          "type": "BbsBlsSignature2020",
+          "issuer": "did:web:cultural.heritage.protection.gov",
+          "issued": "2025-02-01T00:00:00Z",
+          "expires": "2030-02-01T00:00:00Z",
+          "sectionHash": "0xf8a9b0c1d2e3f4a5b6c7d8e9f0a1b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6e7f8a9",
+          "verificationMethod": "did:web:cultural.heritage.protection.gov#bbs-key-heritage-2025",
+          "proofPurpose": "assertionMethod",
+          "proofValue": "w7H2_fine_art_cultural_heritage_compliance_verification_signature_base64"
+        }
+      },
+  
+      "custody": {
+        "custodianDid": "did:web:premium.art.storage.facility",
+        "location": "Climate-Controlled-Vault-NYC-Level-A",
+        "policy": "ICC-ART-STANDARD+FINE-ART-GUILD",
+        "auditCycleDays": 90,
+        "insurancePolicyRef": {"hash": "0x0c1d2e3f4a5b6c7d8e9f0a1b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6e7f8a9b0c1d"},
+        "sectionStatus": {
+          "type": "StatusList2021Entry",
+          "statusPurpose": "revocation",
+          "statusListCredential": "https://status.premium.art.storage.facility/lists/2025-02",
+          "statusListIndex": "13367"
+        },
+        "sectionProof": {
+          "type": "Eip712Signature2023",
+          "issuer": "did:web:premium.art.storage.facility",
+          "issued": "2025-02-20T12:00:00Z",
+          "expires": "2026-02-20T12:00:00Z",
+          "sectionHash": "0x2c3d4e5f6a7b8c9d0e1f2a3b4c5d6e7f8a9b0c1d2e3f4a5b6c7d8e9f0a1b2c3d",
+          "proofValue": "0xf6a7b8c9d0e1f2a3b4c5d6e7f8a9b0c1d2e3f4a5b6c7d8e9f0a1b2c3d4e5f6a7"
+        }
+      }
+    },
+  
+    "credentialStatus": {
+      "id": "https://status.fine.art.gallery.museum/composite/2025-02#30001",
+      "type": "StatusList2021Entry",
+      "statusPurpose": "revocation",
+      "statusListIndex": "30001",
+      "statusListCredential": "https://status.fine.art.gallery.museum/composite/2025-02",
+      "sections": [
+        {"path": "/credentialSubject/identity", "statusListCredential": "https://status.fine.art.gallery.museum/identity/2025-02", "statusListIndex": "18001"},
+        {"path": "/credentialSubject/compliance", "statusListCredential": "https://status.cultural.heritage.protection.gov/lists/2025-02", "statusListIndex": "9912"},
+        {"path": "/credentialSubject/custody", "statusListCredential": "https://status.premium.art.storage.facility/lists/2025-02", "statusListIndex": "13367"}
+      ]
+    },
+  
+    "evidence": [
+      {"type": "OnChainAnchor", "chain": "eip155:137", "tx": "0x6e7f8a9b0c1d2e3f4a5b6c7d8e9f0a1b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6e7f", "purpose": "batchAnchor"}
+    ],
+  
+    "proof": {
+      "type": "BbsBlsSignature2020",
+      "created": "2025-02-20T14:45:00Z",
+      "verificationMethod": "did:web:fine.art.gallery.museum#bbs-key-art-2025",
+      "proofPurpose": "assertionMethod",
+      "proofValue": "pMn8_fine_art_composite_credential_authentication_proof_base64_signature"
+    }
+  }

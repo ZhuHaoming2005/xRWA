@@ -1,0 +1,154 @@
+{
+    "@context": [
+      "https://www.w3.org/ns/credentials/v2",
+      "https://schema.org/",
+      "https://example.org/contexts/rwa-composite-v1.jsonld"
+    ],
+    "type": ["VerifiableCredential", "RWACompositeCredential"],
+    "id": "urn:uuid:8b9c0d1e-2f3a-4b5c-6d7e-8f9a0b1c2d3e",
+    "issuer": "did:web:treasury.securities.gov", 
+    "issuanceDate": "2025-04-05T11:00:00Z",
+    "expirationDate": "2035-04-05T11:00:00Z",
+    "credentialSubject": {
+      "id": "did:ion:EiF0a1b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6e7f8a9b0", 
+      "asset": {
+        "assetId": "did:ion:EiF0a1b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6e7f8a9b0", 
+        "assetType": "Bond",
+        "category": "CorporateBond",
+        "classDid": "did:web:treasury.securities.gov:class:CORP-BOND-AAA",
+        "tokenBinding": {
+          "standard": "ERC-1155",
+          "chain": "eip155:1",
+          "contract": "0x2e3f4a5b6c7d8e9f0a1b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6e7f8a9b0c1d2e3f",
+          "tokenId": "50001"
+        }
+      },
+  
+      "identity": {
+        "schemaVersion": 1,
+        "identitySchema": "https://treasury.securities.gov/schemas/bond-identity-v1.json",
+        "identifiers": [
+          {
+            "identifierScheme": "ISIN",
+            "identifierValue": "US912810RQ65",
+            "jurisdiction": "US",
+            "issuingAuthority": "Securities and Exchange Commission"
+          },
+          { "identifierScheme": "CUSIP", "identifierValue": "912810RQ6" },
+          { "identifierScheme": "BondSerial", "identifierValue": "CORP-BOND-2025-050001" }
+        ],
+        "taxonomies": [
+          { "system": "CFI", "code": "DBFUFR", "label": "Fixed rate corporate bond" },
+          { "system": "FISN", "code": "APPLE INC/4.5 15APR35", "label": "Apple Inc 4.5% due 2035" }
+        ],
+        "documents": [
+          {"name": "Prospectus", "hash": "0x5f6a7b8c9d0e1f2a3b4c5d6e7f8a9b0c1d2e3f4a5b6c7d8e9f0a1b2c3d4e5f6a", "mediaType": "application/pdf", "issuedBy": "did:web:apple.com"},
+          {"name": "TrustIndenture", "hash": "0x9b0c1d2e3f4a5b6c7d8e9f0a1b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6e7f8a9b0c", "mediaType": "application/pdf"},
+          {"name": "RatingReport", "hash": "0xd2e3f4a5b6c7d8e9f0a1b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6e7f8a9b0c1d2e3", "mediaType": "application/pdf", "issuedBy": "did:web:moodys.com"}
+        ],
+        "relations": [
+          { "relation": "belongsToClass", "target": "did:web:treasury.securities.gov:class:CORP-BOND-AAA" },
+          { "relation": "issuedBy", "target": "did:web:apple.com" }
+        ],
+        "attributes": [
+          { "name": "faceValue", "value": "1000", "unit": "USD" },
+          { "name": "couponRate", "value": "4.5", "unit": "percent" },
+          { "name": "maturityDate", "value": "2035-04-15" },
+          { "name": "issueDate", "value": "2025-04-05" },
+          { "name": "creditRating", "value": "AAA" },
+          { "name": "paymentFrequency", "value": "Semi-annual" }
+        ],
+        "custom": {
+          "greenBondCertified": false,
+          "callableAfter": "2030-04-05",
+          "underwriterBank": "Goldman Sachs"
+        },
+        "sectionStatus": {
+          "type": "StatusList2021Entry",
+          "statusPurpose": "revocation",
+          "statusListCredential": "https://status.treasury.securities.gov/identity/2025-04",
+          "statusListIndex": "24001"
+        },
+        "sectionProof": {
+          "type": "Eip712Signature2023",
+          "issuer": "did:web:treasury.securities.gov",
+          "issued": "2025-04-05T11:00:00Z",
+          "expires": "2035-04-05T11:00:00Z",
+          "sectionHash": "0xf6a7b8c9d0e1f2a3b4c5d6e7f8a9b0c1d2e3f4a5b6c7d8e9f0a1b2c3d4e5f6a7",
+          "proofValue": "0xa1b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6e7f8a9b0c1d2e3f4a5b6c7d8e9f0a1b2"
+        }
+      },
+  
+      "compliance": {
+        "licenseId": "SEC-BOND-REG-2025-5501",
+        "sellableRegions": ["US", "CA"],
+        "restrictions": ["AccreditedInvestorOnly", "MinimumInvestment100K"],
+        "effectiveFrom": "2025-04-01",
+        "effectiveTo": "2035-04-15",
+        "regulatorDid": "did:web:sec.gov",
+        "sectionStatus": {
+          "type": "StatusList2021Entry",
+          "statusPurpose": "suspension",
+          "statusListCredential": "https://status.sec.gov/lists/2025-04",
+          "statusListIndex": "13667"
+        },
+        "sectionProof": {
+          "type": "BbsBlsSignature2020",
+          "issuer": "did:web:sec.gov",
+          "issued": "2025-04-01T00:00:00Z",
+          "expires": "2035-04-15T00:00:00Z",
+          "sectionHash": "0xb4c5d6e7f8a9b0c1d2e3f4a5b6c7d8e9f0a1b2c3d4e5f6a7b8c9d0e1f2a3b4c5",
+          "verificationMethod": "did:web:sec.gov#bbs-key-bond-2025",
+          "proofPurpose": "assertionMethod",
+          "proofValue": "z8M5_securities_exchange_commission_bond_regulation_compliance_signature"
+        }
+      },
+  
+      "custody": {
+        "custodianDid": "did:web:dtcc.depository.trust",
+        "location": "DTC-BOND-VAULT-NY-LEVEL-1",
+        "policy": "SEC-CUSTODY-RULES+FIDUCIARY-STANDARD",
+        "auditCycleDays": 30,
+        "insurancePolicyRef": {"hash": "0x6e7f8a9b0c1d2e3f4a5b6c7d8e9f0a1b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6e7f"},
+        "sectionStatus": {
+          "type": "StatusList2021Entry",
+          "statusPurpose": "revocation",
+          "statusListCredential": "https://status.dtcc.depository.trust/lists/2025-04",
+          "statusListIndex": "17890"
+        },
+        "sectionProof": {
+          "type": "Eip712Signature2023",
+          "issuer": "did:web:dtcc.depository.trust",
+          "issued": "2025-04-05T10:00:00Z",
+          "expires": "2026-04-05T10:00:00Z",
+          "sectionHash": "0xc8d9e0f1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9",
+          "proofValue": "0x2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6f7a8b9c0d1e2f3a"
+        }
+      }
+    },
+  
+    "credentialStatus": {
+      "id": "https://status.treasury.securities.gov/composite/2025-04#50001",
+      "type": "StatusList2021Entry",
+      "statusPurpose": "revocation",
+      "statusListIndex": "50001",
+      "statusListCredential": "https://status.treasury.securities.gov/composite/2025-04",
+      "sections": [
+        {"path": "/credentialSubject/identity", "statusListCredential": "https://status.treasury.securities.gov/identity/2025-04", "statusListIndex": "24001"},
+        {"path": "/credentialSubject/compliance", "statusListCredential": "https://status.sec.gov/lists/2025-04", "statusListIndex": "13667"},
+        {"path": "/credentialSubject/custody", "statusListCredential": "https://status.dtcc.depository.trust/lists/2025-04", "statusListIndex": "17890"}
+      ]
+    },
+  
+    "evidence": [
+      {"type": "OnChainAnchor", "chain": "eip155:1", "tx": "0x0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6f7a8b9c0d1e", "purpose": "batchAnchor"}
+    ],
+  
+    "proof": {
+      "type": "BbsBlsSignature2020",
+      "created": "2025-04-05T11:00:00Z",
+      "verificationMethod": "did:web:treasury.securities.gov#bbs-key-bond-2025",
+      "proofPurpose": "assertionMethod",
+      "proofValue": "s9N6_corporate_bond_treasury_securities_composite_credential_proof_b64"
+    }
+  }
