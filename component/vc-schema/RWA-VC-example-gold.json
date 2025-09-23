@@ -66,13 +66,13 @@
           "lbmaApproved": true,
           "vaultSectionId": "VAULT-A-SHELF-001"
         },
-        "sStatus": {
+        "sectionStatus": {
           "type": "StatusList2021Entry",
           "statusPurpose": "revocation",
           "statusListCredential": "https://status.precious.metals.issuer.com/identity/2025-01",
           "statusListIndex": "15001"
         },
-        "sProof": {
+        "sectionProof": {
           "type": "Eip712Signature2023",
           "issuer": "did:web:precious.metals.issuer.com",
           "issued": "2025-01-15T10:30:00Z",
@@ -89,13 +89,13 @@
         "effectiveFrom": "2025-01-01",
         "effectiveTo": "2026-01-01",
         "regulatorDid": "did:web:sge.regulator.gov.cn",
-        "sStatus": {
+        "sectionStatus": {
           "type": "StatusList2021Entry",
           "statusPurpose": "suspension",
           "statusListCredential": "https://status.sge.regulator.gov.cn/lists/2025-01",
           "statusListIndex": "7788"
         },
-        "sProof": {
+        "sectionProof": {
           "type": "BbsBlsSignature2020",
           "issuer": "did:web:sge.regulator.gov.cn",
           "issued": "2025-01-01T00:00:00Z",
@@ -113,13 +113,13 @@
         "policy": "ISO-27001+LBMA-Standards",
         "auditCycleDays": 30,
         "insurancePolicyRef": {"hash": "0xf1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2"},
-        "sStatus": {
+        "sectionStatus": {
           "type": "StatusList2021Entry",
           "statusPurpose": "revocation",
           "statusListCredential": "https://status.secure.vault.shanghai.com/lists/2025-01",
           "statusListIndex": "11223"
         },
-        "sProof": {
+        "sectionProof": {
           "type": "Eip712Signature2023",
           "issuer": "did:web:secure.vault.shanghai.com",
           "issued": "2025-01-15T08:00:00Z",

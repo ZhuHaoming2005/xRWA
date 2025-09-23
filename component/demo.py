@@ -14,7 +14,7 @@ from vc.verifier import verify
 
 def main() -> None:
 	parser = argparse.ArgumentParser(description="RWA-VC demo: issue and verify in one run")
-	parser.add_argument("--in", dest="inp", default="RWA-VC-example-vehicle.json", help="Input VC JSON path")
+	parser.add_argument("--in", dest="inp", default="vc-schema/RWA-VC-example-vehicle.json", help="Input VC JSON path")
 	parser.add_argument("--out", dest="out", default="out/demo.issued.json", help="Output path for issued VC")
 	parser.add_argument("--keys", dest="keys", default="keys/keys.json", help="Keys config JSON path")
 	args = parser.parse_args()

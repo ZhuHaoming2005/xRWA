@@ -1,41 +1,3 @@
-# xRWA - Cross-Chain Real World Assets
-
-## CrossChainChannel Component
-
-An implementation of cross-chain asset swaps enabling atomic, batched exchanges between different asset types.
-
-### Features
-
-- **ETH ↔ ERC20** atomic swaps
-- **ETH ↔ ERC721** atomic swaps  
-- **ERC20 ↔ ERC721** atomic swaps
-- Timeout-based refund mechanism
-- Multi-signature channel state updates
-
-### Quick Start
-
-```bash
-# Install dependencies
-npm install
-
-# Run tests
-npx truffle test
-```
-
-### Development
-
-```bash
-# Run specific test
-npx truffle test test/ETHtoERC20Swap.test.js
-
-# Compile contracts
-npx truffle compile
-
-# Deploy to networks
-npx truffle migrate --network net1
-npx truffle migrate --network net2
-```
-
 ## SPV-based Authentication and RWA VC Component
 
 A demo implementation showcasing the flow of RWA Verifiable Credentials with EIP-712 signatures and SPV-based cross-chain authentication. This is a demonstration codebase, not intended for production use.
@@ -122,7 +84,3 @@ npx truffle migrate --network chain2
   - Gas optimization
   - Access control
   - Proper error handling
-
-## License
-
-MIT License - see [LICENSE](LICENSE) for details.

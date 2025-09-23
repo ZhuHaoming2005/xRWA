@@ -1,0 +1,20 @@
+{
+  "name": "rwa-vc-spv",
+  "version": "1.0.0",
+  "description": "RWA VC Cross-Chain Demo with SPV",
+  "scripts": {
+    "test": "truffle test",
+    "chain1": "ganache-cli --port 8545 --networkId 1337",
+    "chain2": "ganache-cli --port 8546 --networkId 1338"
+  },
+  "dependencies": {
+    "@openzeppelin/contracts": "^4.9.0",
+    "merkletreejs": "^0.3.10",
+    "web3": "^1.10.0"
+  },
+  "devDependencies": {
+    "@truffle/hdwallet-provider": "^2.1.0",
+    "ganache-cli": "^6.12.2",
+    "truffle": "^5.11.0"
+  }
+}

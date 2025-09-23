@@ -1,2 +1,7 @@
 node_modules
 build
+package-lock.json
+component/build
+component/node_modules
+component/package-lock.json
+component/out

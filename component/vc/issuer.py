@@ -33,8 +33,8 @@ def _get_by_path(doc: Dict[str, Any], path: str) -> Any:
 
 
 def _update_section_proof(section: Dict[str, Any], section_hash: str, signature: str) -> None:
-	"""Update existing sProof fields with real hash/signature without adding new fields."""
-	proof = section.get("sProof")
+	"""Update existing sectionProof fields with real hash/signature without adding new fields."""
+	proof = section.get("sectionProof")
 	if isinstance(proof, dict):
 		# Only modify values; keep existing keys
 		if "type" in proof:
@@ -61,11 +61,16 @@ def _strip_existing_eip712(vc: Dict[str, Any]) -> Dict[str, Any]:
 	for path in SECTION_PATHS:
 		section = _get_by_path(doc, path)
 		if isinstance(section, dict):
-			if "sProof" in section:
-				section.pop("sProof", None)
+			# Remove both possible proof fields
+			if "sectionProof" in section:
+				section.pop("sectionProof", None)
+			if "sectionProofEip712" in section:
+				section.pop("sectionProofEip712", None)
 	if isinstance(doc, dict):
 		if "proof" in doc:
 			doc.pop("proof", None)
+		if "proofEip712" in doc:
+			doc.pop("proofEip712", None)
 	return doc
 
 

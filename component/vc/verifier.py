@@ -32,11 +32,15 @@ def _strip_eip712(vc: Dict[str, Any]) -> Dict[str, Any]:
 	for path in SECTION_PATHS:
 		section = _get_by_path(doc, path)
 		if isinstance(section, dict):
-			if "sProof" in section:
-				section.pop("sProof", None)
+			if "sectionProof" in section:
+				section.pop("sectionProof", None)
+			if "sectionProofEip712" in section:
+				section.pop("sectionProofEip712", None)
 	if isinstance(doc, dict):
 		if "proof" in doc:
 			doc.pop("proof", None)
+		if "proofEip712" in doc:
+			doc.pop("proofEip712", None)
 	return doc
 
 
@@ -57,15 +61,15 @@ def verify(vc: Dict[str, Any], expected_addresses: Optional[Dict[str, str]] = No
 	"""
 	results: List[Dict[str, Any]] = []
 
-	# Verify sections (use existing sProof)
+	# Verify sections (use existing sectionProof)
 	clean = _strip_eip712(vc)
 	for path in SECTION_PATHS:
 		section = _get_by_path(vc, path)
 		if not isinstance(section, dict):
 			continue
-		proof = section.get("sProof")
+		proof = section.get("sectionProof")
 		if not isinstance(proof, dict):
-			results.append({"path": path, "ok": False, "reason": "missing sProof"})
+			results.append({"path": path, "ok": False, "reason": "missing sectionProof"})
 			continue
 
 		section_clean = _get_by_path(clean, path) or {}
