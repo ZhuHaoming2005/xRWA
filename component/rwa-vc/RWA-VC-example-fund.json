@@ -63,13 +63,13 @@
           "geographicFocus": ["Hong Kong", "Singapore", "Tokyo", "Sydney"],
           "investmentStrategy": "Core Plus Real Estate"
         },
-        "sectionStatus": {
+        "sStatus": {
           "type": "StatusList2021Entry",
           "statusPurpose": "revocation",
           "statusListCredential": "https://status.investment.fund.regulator/identity/2025-05",
           "statusListIndex": "27001"
         },
-        "sectionProof": {
+        "sProof": {
           "type": "Eip712Signature2023",
           "issuer": "did:web:investment.fund.regulator",
           "issued": "2025-05-12T13:20:00Z",
@@ -86,13 +86,13 @@
         "effectiveFrom": "2025-05-01",
         "effectiveTo": "2030-05-01",
         "regulatorDid": "did:web:sfc.hk.gov",
-        "sectionStatus": {
+        "sStatus": {
           "type": "StatusList2021Entry",
           "statusPurpose": "suspension",
           "statusListCredential": "https://status.sfc.hk.gov/lists/2025-05",
           "statusListIndex": "15778"
         },
-        "sectionProof": {
+        "sProof": {
           "type": "BbsBlsSignature2020",
           "issuer": "did:web:sfc.hk.gov",
           "issued": "2025-05-01T00:00:00Z",
@@ -110,13 +110,13 @@
         "policy": "MiFID-II+AIFMD-COMPLIANCE",
         "auditCycleDays": 90,
         "insurancePolicyRef": {"hash": "0x8a9b0c1d2e3f4a5b6c7d8e9f0a1b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6e7f8a9b"},
-        "sectionStatus": {
+        "sStatus": {
           "type": "StatusList2021Entry",
           "statusPurpose": "revocation",
           "statusListCredential": "https://status.hsbc.custody.hk/lists/2025-05",
           "statusListIndex": "19112"
         },
-        "sectionProof": {
+        "sProof": {
           "type": "Eip712Signature2023",
           "issuer": "did:web:hsbc.custody.hk",
           "issued": "2025-05-12T12:00:00Z",

@@ -1,0 +1,19 @@
+{
+  "domain": {
+    "name": "RWA-VC",
+    "version": "1",
+    "chainId": 1
+  },
+  "keys": {
+    "identity": "0xf695c1f41328c4300ecfddce5d471a9f3ca377e6d708f71a79a5c0acd20a21d1",
+    "compliance": "0xf7bb55bf349f7cc8fc8d7d06e49a244c7908aba47d32591ff99e59a45eb19dbc",
+    "custody": "0x1ba558c744ba473439be2bd41ea0e6d2b834cd0e4c240ed6aee2f3adf383a08d",
+    "document": "0xabad9243bae606c3a741ab701c6ffa7ca67d6326b1690a63d369118509668bcb"
+  },
+  "addresses": {
+    "identity": "0xa8f49b78867c7C035DA520119E10829Cd4bD7a07",
+    "compliance": "0x306CA0e0510a1640CC5b3356bC2a0BAAb2A78D33",
+    "custody": "0xe9EFaB7764079360d4df87a963C91296af64d363",
+    "document": "0x13e2887afCEDd892423a87c4d70ffB4410Da2A71"
+  }
+}

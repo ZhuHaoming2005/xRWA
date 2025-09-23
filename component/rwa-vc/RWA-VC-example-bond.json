@@ -63,13 +63,13 @@
           "callableAfter": "2030-04-05",
           "underwriterBank": "Goldman Sachs"
         },
-        "sectionStatus": {
+        "sStatus": {
           "type": "StatusList2021Entry",
           "statusPurpose": "revocation",
           "statusListCredential": "https://status.treasury.securities.gov/identity/2025-04",
           "statusListIndex": "24001"
         },
-        "sectionProof": {
+        "sProof": {
           "type": "Eip712Signature2023",
           "issuer": "did:web:treasury.securities.gov",
           "issued": "2025-04-05T11:00:00Z",
@@ -86,13 +86,13 @@
         "effectiveFrom": "2025-04-01",
         "effectiveTo": "2035-04-15",
         "regulatorDid": "did:web:sec.gov",
-        "sectionStatus": {
+        "sStatus": {
           "type": "StatusList2021Entry",
           "statusPurpose": "suspension",
           "statusListCredential": "https://status.sec.gov/lists/2025-04",
           "statusListIndex": "13667"
         },
-        "sectionProof": {
+        "sProof": {
           "type": "BbsBlsSignature2020",
           "issuer": "did:web:sec.gov",
           "issued": "2025-04-01T00:00:00Z",
@@ -110,13 +110,13 @@
         "policy": "SEC-CUSTODY-RULES+FIDUCIARY-STANDARD",
         "auditCycleDays": 30,
         "insurancePolicyRef": {"hash": "0x6e7f8a9b0c1d2e3f4a5b6c7d8e9f0a1b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6e7f"},
-        "sectionStatus": {
+        "sStatus": {
           "type": "StatusList2021Entry",
           "statusPurpose": "revocation",
           "statusListCredential": "https://status.dtcc.depository.trust/lists/2025-04",
           "statusListIndex": "17890"
         },
-        "sectionProof": {
+        "sProof": {
           "type": "Eip712Signature2023",
           "issuer": "did:web:dtcc.depository.trust",
           "issued": "2025-04-05T10:00:00Z",

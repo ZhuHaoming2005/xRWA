@@ -64,13 +64,13 @@
           "commercialValue": "High",
           "licensingAvailable": true
         },
-        "sectionStatus": {
+        "sStatus": {
           "type": "StatusList2021Entry",
           "statusPurpose": "revocation",
           "statusListCredential": "https://status.ip.office.gov/identity/2025-06",
           "statusListIndex": "30001"
         },
-        "sectionProof": {
+        "sProof": {
           "type": "Eip712Signature2023",
           "issuer": "did:web:ip.office.gov",
           "issued": "2025-06-18T16:30:00Z",
@@ -87,13 +87,13 @@
         "effectiveFrom": "2025-06-18",
         "effectiveTo": "2043-12-15",
         "regulatorDid": "did:web:uspto.gov",
-        "sectionStatus": {
+        "sStatus": {
           "type": "StatusList2021Entry",
           "statusPurpose": "suspension",
           "statusListCredential": "https://status.uspto.gov/lists/2025-06",
           "statusListIndex": "17889"
         },
-        "sectionProof": {
+        "sProof": {
           "type": "BbsBlsSignature2020",
           "issuer": "did:web:uspto.gov",
           "issued": "2025-06-18T00:00:00Z",
@@ -111,13 +111,13 @@
         "policy": "IP-PROTECTION-STANDARD+DIGITAL-CUSTODY",
         "auditCycleDays": 180,
         "insurancePolicyRef": {"hash": "0xc4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5"},
-        "sectionStatus": {
+        "sStatus": {
           "type": "StatusList2021Entry",
           "statusPurpose": "revocation",
           "statusListCredential": "https://status.ip.escrow.service/lists/2025-06",
           "statusListIndex": "21223"
         },
-        "sectionProof": {
+        "sProof": {
           "type": "Eip712Signature2023",
           "issuer": "did:web:ip.escrow.service",
           "issued": "2025-06-18T15:00:00Z",

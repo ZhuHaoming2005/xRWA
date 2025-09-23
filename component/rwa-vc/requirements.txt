@@ -1,0 +1,2 @@
+eth-account>=0.10.0
+eth-utils>=2.3.1

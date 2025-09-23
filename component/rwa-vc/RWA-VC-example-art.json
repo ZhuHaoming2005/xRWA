@@ -62,13 +62,13 @@
           "exhibitionHistory": ["Salon de Paris 1876", "MOMA Impressionist Collection 2020"],
           "insuranceAppraisal": "USD 15,000,000"
         },
-        "sectionStatus": {
+        "sStatus": {
           "type": "StatusList2021Entry",
           "statusPurpose": "revocation",
           "statusListCredential": "https://status.fine.art.gallery.museum/identity/2025-02",
           "statusListIndex": "18001"
         },
-        "sectionProof": {
+        "sProof": {
           "type": "Eip712Signature2023",
           "issuer": "did:web:fine.art.gallery.museum",
           "issued": "2025-02-20T14:45:00Z",
@@ -85,13 +85,13 @@
         "effectiveFrom": "2025-02-01",
         "effectiveTo": "2030-02-01",
         "regulatorDid": "did:web:cultural.heritage.protection.gov",
-        "sectionStatus": {
+        "sStatus": {
           "type": "StatusList2021Entry",
           "statusPurpose": "suspension",
           "statusListCredential": "https://status.cultural.heritage.protection.gov/lists/2025-02",
           "statusListIndex": "9912"
         },
-        "sectionProof": {
+        "sProof": {
           "type": "BbsBlsSignature2020",
           "issuer": "did:web:cultural.heritage.protection.gov",
           "issued": "2025-02-01T00:00:00Z",
@@ -109,13 +109,13 @@
         "policy": "ICC-ART-STANDARD+FINE-ART-GUILD",
         "auditCycleDays": 90,
         "insurancePolicyRef": {"hash": "0x0c1d2e3f4a5b6c7d8e9f0a1b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6e7f8a9b0c1d"},
-        "sectionStatus": {
+        "sStatus": {
           "type": "StatusList2021Entry",
           "statusPurpose": "revocation",
           "statusListCredential": "https://status.premium.art.storage.facility/lists/2025-02",
           "statusListIndex": "13367"
         },
-        "sectionProof": {
+        "sProof": {
           "type": "Eip712Signature2023",
           "issuer": "did:web:premium.art.storage.facility",
           "issued": "2025-02-20T12:00:00Z",

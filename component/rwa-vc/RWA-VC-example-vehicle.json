@@ -64,13 +64,13 @@
           "superchargerAccess": true,
           "softwareVersion": "2025.4.1"
         },
-        "sectionStatus": {
+        "sStatus": {
           "type": "StatusList2021Entry",
           "statusPurpose": "revocation",
           "statusListCredential": "https://status.automotive.registry.dmv/identity/2025-03",
           "statusListIndex": "21001"
         },
-        "sectionProof": {
+        "sProof": {
           "type": "Eip712Signature2023",
           "issuer": "did:web:automotive.registry.dmv",
           "issued": "2025-03-10T09:15:00Z",
@@ -87,13 +87,13 @@
         "effectiveFrom": "2025-03-01",
         "effectiveTo": "2026-03-01",
         "regulatorDid": "did:web:ca.dmv.gov",
-        "sectionStatus": {
+        "sStatus": {
           "type": "StatusList2021Entry",
           "statusPurpose": "suspension",
           "statusListCredential": "https://status.ca.dmv.gov/lists/2025-03",
           "statusListIndex": "11445"
         },
-        "sectionProof": {
+        "sProof": {
           "type": "BbsBlsSignature2020",
           "issuer": "did:web:ca.dmv.gov",
           "issued": "2025-03-01T00:00:00Z",
@@ -111,13 +111,13 @@
         "policy": "AUTO-STORAGE-STANDARD+CLIMATE-CONTROLLED",
         "auditCycleDays": 60,
         "insurancePolicyRef": {"hash": "0x4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e"},
-        "sectionStatus": {
+        "sStatus": {
           "type": "StatusList2021Entry",
           "statusPurpose": "revocation",
           "statusListCredential": "https://status.secure.auto.storage.ca/lists/2025-03",
           "statusListIndex": "15589"
         },
-        "sectionProof": {
+        "sProof": {
           "type": "Eip712Signature2023",
           "issuer": "did:web:secure.auto.storage.ca",
           "issued": "2025-03-10T08:30:00Z",
