@@ -126,3 +126,5 @@ npx truffle migrate --network chain2
 ## License
 
 MIT License - see [LICENSE](LICENSE) for details.
+
+It also provided technical support for Cross-Channel [TC'23].
