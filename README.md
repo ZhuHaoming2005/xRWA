@@ -122,9 +122,8 @@ npx truffle migrate --network chain2
   - Gas optimization
   - Access control
   - Proper error handling
+- It also provides technical support for Cross-Channel [TC'23].
 
 ## License
 
 MIT License - see [LICENSE](LICENSE) for details.
-
-It also provided technical support for Cross-Channel [TC'23].
